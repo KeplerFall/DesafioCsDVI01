@@ -1,0 +1,14 @@
+C:\Users\kepler.pereira.BR6\Documents\Workspace\Learning\Tarefas\bin\Debug\net7.0\Learning.exe
+C:\Users\kepler.pereira.BR6\Documents\Workspace\Learning\Tarefas\bin\Debug\net7.0\Learning.deps.json
+C:\Users\kepler.pereira.BR6\Documents\Workspace\Learning\Tarefas\bin\Debug\net7.0\Learning.runtimeconfig.json
+C:\Users\kepler.pereira.BR6\Documents\Workspace\Learning\Tarefas\bin\Debug\net7.0\Learning.dll
+C:\Users\kepler.pereira.BR6\Documents\Workspace\Learning\Tarefas\bin\Debug\net7.0\Learning.pdb
+C:\Users\kepler.pereira.BR6\Documents\Workspace\Learning\Tarefas\obj\Debug\net7.0\Learning.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kepler.pereira.BR6\Documents\Workspace\Learning\Tarefas\obj\Debug\net7.0\Learning.AssemblyInfoInputs.cache
+C:\Users\kepler.pereira.BR6\Documents\Workspace\Learning\Tarefas\obj\Debug\net7.0\Learning.AssemblyInfo.cs
+C:\Users\kepler.pereira.BR6\Documents\Workspace\Learning\Tarefas\obj\Debug\net7.0\Learning.csproj.CoreCompileInputs.cache
+C:\Users\kepler.pereira.BR6\Documents\Workspace\Learning\Tarefas\obj\Debug\net7.0\Learning.dll
+C:\Users\kepler.pereira.BR6\Documents\Workspace\Learning\Tarefas\obj\Debug\net7.0\refint\Learning.dll
+C:\Users\kepler.pereira.BR6\Documents\Workspace\Learning\Tarefas\obj\Debug\net7.0\Learning.pdb
+C:\Users\kepler.pereira.BR6\Documents\Workspace\Learning\Tarefas\obj\Debug\net7.0\Learning.genruntimeconfig.cache
+C:\Users\kepler.pereira.BR6\Documents\Workspace\Learning\Tarefas\obj\Debug\net7.0\ref\Learning.dll
