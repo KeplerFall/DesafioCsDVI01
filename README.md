@@ -42,5 +42,23 @@ Essa rota é usada para verificar se o usuário possui um email válido, ele rec
 > | 200        | application/json       | `{status: 200, message: "Success. The User is now verified"}`                | Sucesso, email validado com sucesso.   |
 > | 400        | application/json       | `{status: 400, error: "Invalid Code"}`                                       | Falha, código menor que 4 caracteres   |
 > | 409        | application/json       | `{status: 409, error: "Code expired"}`                                       | Falha, código expirado                 |
-> > |500       | application/json       | `{status: 500, error: "Internal server error"}`                              | Falha, erro interno do servidor.       |
+> | 500        | application/json       | `{status: 500, error: "Internal server error"}`                              | Falha, erro interno do servidor.       |
 </details>
+
+#### Authentication Login
+<details>
+<summary><code>POST -></code><code>/authentication/login</code> (Rota de autenticação para login do usuário)</summary>
+  
+#### Parâmetros
+> | Name      |  Type     | Data type               | Description                                                           |
+> |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
+> | Email      |  required | String   | Email do usuário  |
+> | Password      |  required | String   | Senha do usuário  |
+
+#### Respostas
+> | Http code | Content-type | Response |  Description
+> |------------|------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+> | 200        | application/json       | { status: 200, message: "Success", token: {token}, data: {update} }          | Sucesso, {token}: Novo token gerado para garantir a segurança, {update}: Status da atualização de last seen e status online.
+</details>
+
+
