@@ -65,6 +65,7 @@ Essa rota é usada para verificar se o usuário possui um email válido, ele rec
 
 <details>
 <summary><code>POST -></code><code>/authentication/register</code> (Registra um novo usuário ao banco)</summary>
+  
 #### Parâmetros
 > | Name      |  Type     | Data type               | Description                                                           |
 > |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
