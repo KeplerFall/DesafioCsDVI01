@@ -14,6 +14,5 @@
 ##### Respostas
 > | http code     | content-type                      | response                                                            |
 > |---------------|-----------------------------------|---------------------------------------------------------------------|
-> | `200`         | `text/plain;charset=UTF-8`        | YAML string                                                         |
-> | `400`         | `application/json`                | `{"code":"400","message":"Bad Request"}`                            |
+> |`200         | application/json       | '{status: 200, message: "Success. The Code was sent to your email"}'|
 </details>
