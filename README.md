@@ -2,7 +2,7 @@
 ------------------------------------------------------------------------------------------
 ## WishList
 <details>
-<summary><code>POST</code><code>/</code><code>wishlist</code>(Cria um novo usuário a lista de espera)</summary>
+<summary><code>POST -></code><code>/</code><code>wishlist</code>(Cria um novo usuário a lista de espera)</summary>
 
 #### Descrição
 Essa é a primeira rota a ser usada pelo usuário durante o beta fechado, onde ele se cadastrará, essa rota permite a criação do documento que contém o usuário e email na tabela de usuários e o código de verificação, que é mandado para o email dele, que posteriormente será usado como parâmetro na rota de <code>/code</code>, o código tem validade de 5 minutos.
@@ -26,7 +26,7 @@ Essa é a primeira rota a ser usada pelo usuário durante o beta fechado, onde e
 ## Code
 
 <details>
-<summary><code>POST</code><code>/</code><code>wishlist</code><code>/</code><code>code</code>(Valida o código que o usuário recebeu pelo email)</summary>
+<summary><code>POST -></code><code>/</code><code>wishlist</code><code>/</code><code>code</code>(Valida o código que o usuário recebeu pelo email)</summary>
 
 #### Descrição
 Essa rota é usada para verificar se o usuário possui um email válido, ele receberá um código no email dele após passar pela rota de <code>/wishlist</code> que perdurará por 5 minutos, depois disso o código se torna expirado.
