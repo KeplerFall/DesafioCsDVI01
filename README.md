@@ -75,7 +75,6 @@ Essa rota é usada para verificar se o usuário possui um email válido, ele rec
 > | birthday | required | String | Data de nascimento do usuário | 
 > | phone | required | String | Telefone do usuário |
 > | avatar | required | file | Foto do usuário
-</details>
 
 #### Respostas
 > | Http code | Content-type | Response |  Description
