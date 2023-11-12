@@ -86,4 +86,21 @@ Essa rota é usada para verificar se o usuário possui um email válido, ele rec
 
 </details>
 
+<details>
+<summary><code>POST -></code> <code>/authentication/recover</code> (Rota para recuperar a conta do usuário)</summary>
+
+#### Parâmetros
+> | Name      |  Type     | Data type               | Description                                                           |
+> |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
+> | email | required | String | Email do usuário |
+
+#### Respostas
+> | Http code | Content-type | Response |  Description
+> |------------|------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+> | 200        | application/json       | `{status: 200, message: "Success", token: *token*}`                          | Sucesso, email de recuperação com um novo codigo foi enviado para o email do usuário; {token} : Novo token para segurança do usuário |
+> | 400        | application/json       | `{ status: 400, error: "Invalid Email" }`                                    | Falha, email não passou pelo REGEX de verificação do servidor |
+> | 404        | application/json       | `{status: 404, error: "User not found"}`                                     | Falha, usuário não encontrado na base de dados|
+</details>
+
+
 
