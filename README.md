@@ -11,8 +11,8 @@ Essa é a primeira rota a ser usada pelo usuário durante o beta fechado, onde e
 
 > | Name      |  Type     | Data type               | Description                                                           |
 > |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Email      |  required | String   | Email do usuário  |
-> | Name      |  required | String   | Nome do usuário  |
+> | email      |  required | String   | Email do usuário  |
+> | name      |  required | String   | Nome do usuário  |
 
 ##### Respostas
 > | Http code | Content-type | Response |  Description
@@ -50,8 +50,8 @@ Essa rota é usada para verificar se o usuário possui um email válido, ele rec
 #### Parâmetros
 > | Name      |  Type     | Data type               | Description                                                           |
 > |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Email      |  required | String   | Email do usuário  |
-> | Password      |  required | String   | Senha do usuário  |
+> | email      |  required | String   | Email do usuário  |
+> | password      |  required | String   | Senha do usuário  |
 
 #### Respostas
 > | Http code | Content-type | Response |  Description
@@ -61,6 +61,18 @@ Essa rota é usada para verificar se o usuário possui um email válido, ele rec
 > | 400        | application/json       | `{ status: 400, error: "Invalid Password" }`                                   | Senha omitida ou inválida|
 > | 404        | application/json       | `{ status: 404, error: "User not found" }`                                     | Email não encontrado na base de dados|
 > | 500        | application/json       | `{status: 500, error: "Internal server error"}`                                | Falha, erro interno do servidor.|
+</details>
+
+<details>
+<summary><code>POST -></code><code>/authentication/register</code> (Registra um novo usuário ao banco)</summary>
+#### Parâmetros
+> | Name      |  Type     | Data type               | Description                                                           |
+> |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
+> | email      |  required | String   | Email do usuário  |
+> | password      |  required | String   | Senha do usuário  |
+> | name | required | String | Nome do usuário |
+> | birthday | required | String | Data de nascimento do usuário | 
+> | phone | required | String | Telefone do usuário |
 </details>
 
 
