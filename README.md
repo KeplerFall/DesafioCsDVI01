@@ -10,4 +10,10 @@
 > |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
 > | Email      |  required | String   | Email do usuário  |
 > | Name      |  required | String   | Nome do usuário  |
+
+##### Respostas
+> | http code     | content-type                      | response                                                            |
+> |---------------|-----------------------------------|---------------------------------------------------------------------|
+> | `200`         | `text/plain;charset=UTF-8`        | YAML string                                                         |
+> | `400`         | `application/json`                | `{"code":"400","message":"Bad Request"}`                            |
 </details>
