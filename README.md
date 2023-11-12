@@ -28,8 +28,19 @@ Essa é a primeira rota a ser usada pelo usuário durante o beta fechado, onde e
 <details>
 <summary><code>POST</code><code>/</code><code>wishlist/code</code><code>(Valida o código que o usuário recebeu pelo email)</code></summary>
 
+#### Descrição
+Essa rota é usada para verificar se o usuário possui um email válido, ele receberá um código no email dele após passar pela rota de <code>/wishlist</code> que perdurará por 5 minutos, depois disso o código se torna expirado.
+
 #### Parâmetros
 > | Name | Type | Data Type | Description |
 > |------|-----------|-------|---------------------------------------|
 > | code | required | String | Codigo recebido pelo email do usuário |
+
+#### Respostas
+> | Http code | Content-type | Response |  Description
+> |------------|------------------------|------------------------------------------------------------------------------|----------------------------------------|
+> | 200        | application/json       | `{status: 200, message: "Success. The User is now verified"}`                | Sucesso, email validado com sucesso.   |
+> | 400        | application/json       | `{status: 400, error: "Invalid Code"}`                                       | Falha, código menor que 4 caracteres   |
+> | 409        | application/json       | `{status: 409, error: "Code expired"}`                                       | Falha, código expirado                 |
+> > |500       | application/json       | `{status: 500, error: "Internal server error"}`                              | Falha, erro interno do servidor.       |
 </details>
