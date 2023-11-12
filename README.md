@@ -57,9 +57,9 @@ Essa rota é usada para verificar se o usuário possui um email válido, ele rec
 > | Http code | Content-type | Response |  Description
 > |------------|------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
 > | 200        | application/json       | `{ status: 200, message: "Success", token: *token*, data: *update* }`          | Sucesso, {token}: Novo token gerado para garantir a segurança, {update}: Status da atualização de last seen e status online.|
-> | 400        | application/json       | `{ status: 400, error: "Invalid Email" }`                                      | Email não passou pelas verificações dos REGEX, e foi rejeitado.|
-> | 400        | application/json       | `{ status: 400, error: "Invalid Password" }`                                   | Senha omitida ou inválida|
-> | 404        | application/json       | `{ status: 404, error: "User not found" }`                                     | Email não encontrado na base de dados|
+> | 400        | application/json       | `{ status: 400, error: "Invalid Email" }`                                      | Falha email não passou pelas verificações dos REGEX, e foi rejeitado.|
+> | 400        | application/json       | `{ status: 400, error: "Invalid Password" }`                                   | Falha senha omitida ou inválida|
+> | 404        | application/json       | `{ status: 404, error: "User not found" }`                                     | Falha email não encontrado na base de dados|
 > | 500        | application/json       | `{status: 500, error: "Internal server error"}`                                | Falha, erro interno do servidor.|
 </details>
 
@@ -74,6 +74,17 @@ Essa rota é usada para verificar se o usuário possui um email válido, ele rec
 > | name | required | String | Nome do usuário |
 > | birthday | required | String | Data de nascimento do usuário | 
 > | phone | required | String | Telefone do usuário |
+> | avatar | required | file | Foto do usuário
+</details>
+
+#### Respostas
+> | Http code | Content-type | Response |  Description
+> |------------|------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+> | 200        | application/json       | `{ status: 200, message: "User created successfully" }`                      | Sucesso, usuário criado com sucesso|
+> | 400        | application/json       | `{ status: 400, error: "Invalid Request" }`                                  | Falha, avatar ou algum campo requerido está vazio|
+> | 400        | application/json       | `{ status: 400, error: "Invalid Request" }`                                  | Falha, o campo, senha, email nome, data de nascimento ou telefone estão vazios|
+> | 409        | application/json       | `{ status: 409, error: "User not verified or allowed in our wishlist" }`     | Falha, usuário não foi verificado com o código recebido por email|
+
 </details>
 
 
