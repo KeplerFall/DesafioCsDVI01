@@ -83,6 +83,7 @@ Essa rota é usada para verificar se o usuário possui um email válido, ele rec
 > | 400        | application/json       | `{ status: 400, error: "Invalid Request" }`                                  | Falha, avatar ou algum campo requerido está vazio|
 > | 400        | application/json       | `{ status: 400, error: "Invalid Request" }`                                  | Falha, o campo, senha, email nome, data de nascimento ou telefone estão vazios|
 > | 409        | application/json       | `{ status: 409, error: "User not verified or allowed in our wishlist" }`     | Falha, usuário não foi verificado com o código recebido por email|
+> | 500        | application/json       | `{status: 500, error: "Internal server error"}`                                | Falha, erro interno do servidor.|
 
 </details>
 
@@ -100,7 +101,24 @@ Essa rota é usada para verificar se o usuário possui um email válido, ele rec
 > | 200        | application/json       | `{status: 200, message: "Success", token: *token*}`                          | Sucesso, email de recuperação com um novo codigo foi enviado para o email do usuário; {token} : Novo token para segurança do usuário |
 > | 400        | application/json       | `{ status: 400, error: "Invalid Email" }`                                    | Falha, email não passou pelo REGEX de verificação do servidor |
 > | 404        | application/json       | `{status: 404, error: "User not found"}`                                     | Falha, usuário não encontrado na base de dados|
+> | 500        | application/json       | `{status: 500, error: "Internal server error"}`                                | Falha, erro interno do servidor.|
 </details>
 
+<details>
+<summary><code>POST -></code><code>/authentication/recover/code</code> (Valida o código para recuperação da conta do usuário)</summary>
 
+#### Parâmetros
+> | Name      |  Type     | Data type               | Description                                                           |
+> |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
+> | code      | required  | String                  | Código recebido pelo usuário pelo email |
 
+#### Respostas
+> | Http code | Content-type | Response |  Description
+> |------------|------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+> | 200        | application/json       | `{status: 500, error: "Internal server error"}`                              | Sucesso, usuário alterado para modo de recuperação |
+> | 400        | application/json       | `{status: 400, error: "Invalid Code"}`                                       | Falha, código menor que 4 caracteres|
+> | 404        | application/json       | `{status: 404, error: "Code not found"}`                                     | Falha, código não consta na base de dados |
+> | 409        | application/json       | `{status: 409, error: "Code expired"}`                                       | Falha, código expirado, posteriormente apagado da base de dados |
+> | 500        | application/json       | `{status: 500, error: "Internal server error"}`                                | Falha, erro interno do servidor.|
+
+</details>
