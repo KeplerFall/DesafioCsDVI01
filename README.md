@@ -45,7 +45,7 @@ Essa rota é usada para verificar se o usuário possui um email válido, ele rec
 > | 500        | application/json       | `{status: 500, error: "Internal server error"}`                              | Falha, erro interno do servidor.       |
 </details>
 
-#### Authentication Login
+## Authentication Login
 <details>
 <summary><code>POST -></code><code>/authentication/login</code> (Rota de autenticação para login do usuário)</summary>
   
