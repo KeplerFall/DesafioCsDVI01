@@ -3,7 +3,10 @@
 ## WishList
 <details>
 <summary><code>POST</code><code>/</code><code>wishlist</code><code>(Cria um novo usuário a lista de espera)</code></summary>
-  
+
+#### Descrição
+Essa é a primeira rota a ser usada pelo usuário durante o beta fechado, onde ele se cadastrará, essa rota permite a criação do documento que contém o usuário e email na tabela de usuários e o código de verificação, que é mandado para o email dele, que posteriormente será usado como parâmetro na rota de <code>/code</code>
+
 ##### Parâmetros
 
 > | Name      |  Type     | Data type               | Description                                                           |
