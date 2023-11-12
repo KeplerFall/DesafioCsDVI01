@@ -23,8 +23,6 @@ Essa é a primeira rota a ser usada pelo usuário durante o beta fechado, onde e
 > |500         | application/json       | `{status: 500, error: "Internal server error"}`                              | Falha, erro interno do servidor.|
 </details>
 
-## Code
-
 <details>
 <summary><code>POST -></code><code>/wishlist/code</code> (Valida o código que o usuário recebeu pelo email)</summary>
 
@@ -45,7 +43,7 @@ Essa rota é usada para verificar se o usuário possui um email válido, ele rec
 > | 500        | application/json       | `{status: 500, error: "Internal server error"}`                              | Falha, erro interno do servidor.       |
 </details>
 
-## Authentication Login
+## Authentication
 <details>
 <summary><code>POST -></code><code>/authentication/login</code> (Rota de autenticação para login do usuário)</summary>
   
