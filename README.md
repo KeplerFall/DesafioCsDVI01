@@ -58,7 +58,7 @@ Essa rota é usada para verificar se o usuário possui um email válido, ele rec
 #### Respostas
 > | Http code | Content-type | Response |  Description
 > |------------|------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
-> | 200        | application/json       | { status: 200, message: "Success", token: {token}, data: {update} }          | Sucesso, {token}: Novo token gerado para garantir a segurança, {update}: Status da atualização de last seen e status online.
+> | 200        | application/json       | { status: 200, message: "Success", token: *token*, data: *update* }          | Sucesso, {token}: Novo token gerado para garantir a segurança, {update}: Status da atualização de last seen e status online.
 </details>
 
 
