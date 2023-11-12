@@ -26,7 +26,7 @@ Essa é a primeira rota a ser usada pelo usuário durante o beta fechado, onde e
 ## Code
 
 <details>
-<sumary><code>POST</code><code>/</code><code>wishlist/code</code><code>(Valida o código que o usuário recebeu pelo email)</code></sumary>
+<summary><code>POST</code><code>/</code><code>wishlist/code</code><code>(Valida o código que o usuário recebeu pelo email)</code></summary>
 
 #### Parâmetros
 > | Name | Type | Data Type | Description |
